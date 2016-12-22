@@ -71,7 +71,7 @@ module.exports = (opts, cb) => {
     })
     if (pjson) {
       socket.on('package.json', function (fn) {
-        fn(pjson)
+        if(fn) fn(pjson);
       })
     }
   })
